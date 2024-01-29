@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Skill Builder 0
  *
- * @author (You)
+ * @Evans
  * @version (2.1, 2.2)
  */
 public class SkillBuilder1 {
@@ -13,13 +13,13 @@ public class SkillBuilder1 {
 
         System.out.println("You're Jane's friend!");
         System.out.println("\"What's your name?\"");
-        String userName = input.next();
+        String userName = input.nextLine();
 
         System.out.println("Enter a floating-point number:");
         double spice = input.nextDouble();
 
-        double equation = (4/3) * (Math.pow(2, (Math.pow(5, (1/2)) / (Math.pow(spice, 3)))));
-        System.out.println("Well " + userName + " the spice value resulted in " + equation);
+        double equation = (4.0/3) * Math.pow(2, (Math.sqrt(5) / (Math.pow(spice, 3))));
+        System.out.println("Well " + userName + ", the spice value resulted in " + equation);
 
         double equationt100 = equation * 100;
         int equationInt = (int) (equationt100);
@@ -47,12 +47,11 @@ public class SkillBuilder1 {
 
         // TODO: Calculate and output the amount of paint in gallons needed to paint the wall
         double paintNeeded = wallArea/ squareFeetPerGallons;
-        System.out.print("Paint needed: ");
-        System.out.printf("%.2f", paintNeeded);
-        System.out.print(" gallons");
+        System.out.printf("Paint needed: %.2f", paintNeeded);
+        System.out.println(" gallons");
 
         // TODO: Calculate and output the number of 1 gallon cans needed to paint the wall, rounded up to nearest integer
-        int gallonsNeeded = (int) Math.ceil(paintNeeded/gallonsPerCan);
-        System.out.print("Cans needed: " + gallonsNeeded + "can(s)");
+        int cansNeeded = (int) Math.ceil(paintNeeded);
+        System.out.print("Cans needed: " + cansNeeded + "can(s)");
     }
 }
